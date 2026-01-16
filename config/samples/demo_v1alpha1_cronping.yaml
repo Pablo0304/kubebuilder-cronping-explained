@@ -1,0 +1,9 @@
+# Creación de los objetos de K8S o CRs:
+apiVersion: demo.my.domain/v1alpha1
+kind: CronPing
+metadata:
+  name: ping-google
+  namespace: dev
+spec:
+  targetRef: google
+  schedule: "*/2 * * * *"

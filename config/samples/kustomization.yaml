@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- demo_v1alpha1_cronping.yaml
+- demo_v1alpha1_pingtarget.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

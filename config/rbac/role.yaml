@@ -8,6 +8,7 @@ rules:
   - demo.my.domain
   resources:
   - cronpings
+  - pingtargets
   verbs:
   - create
   - delete
@@ -20,12 +21,14 @@ rules:
   - demo.my.domain
   resources:
   - cronpings/finalizers
+  - pingtargets/finalizers
   verbs:
   - update
 - apiGroups:
   - demo.my.domain
   resources:
   - cronpings/status
+  - pingtargets/status
   verbs:
   - get
   - patch

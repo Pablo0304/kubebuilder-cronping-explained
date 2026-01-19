@@ -56,40 +56,31 @@ El controlador de CronPing:
 ## Pasos para inicializar (orden recomendado)
 
 1. Inicializar proyecto Kubebuilder:
-
    - `kubebuilder init --domain my.domain --repo my.domain/cronping-operator`
 
 2. Crear CRD CronPing:
-
    - `kubebuilder create api --group demo --version v1alpha1 --kind CronPing`
 
 3. Crear CRD PingTarget:
-
    - `kubebuilder create api --group demo --version v1alpha1 --kind PingTarget`
 
 4. Editar la lógica del controller:
-
    - Archivo: `internal/controller/cronping_controller.go`
    - Objetivo: crear un CronJob a partir de CronPing + PingTarget
 
 5. Generar manifiestos (CRDs/RBAC):
-
    - `make manifests`
 
 6. Crear un cluster local con kind (en este caso yo ya lo había creado):
-
    - `kind create cluster --name kubebuilder`
 
 7. Instalar CRDs en el cluster:
-
    - `make install`
 
 8. Ejecutar el controlador local:
-
    - `make run`
 
 9. Aplicar ejemplos (previamente hay que editar estos ".yaml"):
-
    - `kubectl apply -k config/samples`
 
 ## Ejecución local vs despliegue en el cluster
@@ -156,7 +147,7 @@ spec:
   schedule: "*/2 * * * *"
 ```
 
-## Cómo comprobar que funciona
+## ¿Cómo comprobar que funciona?
 
 1. Ver CRs:
 
